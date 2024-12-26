@@ -197,7 +197,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (edttxt.getText().toString().isEmpty()) {
                     edttxt.setText(null);
-
                 }
                 else {
                     num1 = Float.parseFloat(edttxt.getText()+"");
@@ -235,9 +234,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (edttxt.getText().toString().isEmpty() || String.valueOf(num1) == null) {
+                if (edttxt.getText().toString().isEmpty() || String.valueOf(num1) == null || edttxt.getText().toString().equals(".")) {
                     edttxt.setText(null);
                     tv.setText(null);
+                    btndot.setEnabled(true);
                 }
                 else {
 
